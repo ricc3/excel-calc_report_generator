@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display XLSX file data</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <!-- <input type="file" id="excel-file" accept=".xlsx" onchange="handleFile()" /> -->
+            <label for="excel-file" class="header__label">select yout xlsx file</label>
+            <input type="file" id="excel-file" accept=".xlsx" class="header__input">
+            <div class="header__fileName">
+                <p>You are working on:</p>
+                <h2 id="fileName">Currently no file loaded</h2>
+            </div>
+        </header>
+        <main>
+            <div id="excel-data"></div>
+        </main>
+        <!-- Modal -->
+        <div class="modal" data-modal>
+            <div class="modal__content">
+                <span class="modal__content__closeButton" data-modalCloseButton>&times;</span>
+                <div data-modalMesseng></div>
+                <button class="modal__content__copyButton" data-modalContentCopyButton>
+                    Copy message
+                </button>
+            </div>
+            <div class="modal__toast" data-modalToast>
+                <p>message has been copied</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/cdn.sheetjs.com_xlsx-0.20.0_package_dist_xlsx.full.min.js"></script>
+
+    <script type="module" src="js/App.js"></script>
+
+</body>
+
+</html>

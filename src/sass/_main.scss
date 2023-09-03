@@ -1,0 +1,156 @@
+@use '_colors' as c;
+@use '_animation';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background-color: c.$bgcMain;
+	color: c.$textMain;
+	font-size: 1.6rem;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+}
+.header {
+	margin: 3em;
+
+	&__label {
+		padding: 1rem;
+		width: 200px;
+		display: flex;
+		justify-content: center;
+		transition: color 0.5s linear, background-color 0.3s ease;
+		border: 1px solid c.$textMain;
+		border-radius: 7px;
+	}
+	&__label:hover {
+		cursor: pointer;
+		color: c.$bgcMain;
+		background-color: c.$textMain;
+	}
+	&__input {
+		display: none;
+	}
+	&__fileName {
+		margin-top: 22px;
+
+		h2 {
+			margin-top: 7px;
+		}
+	}
+}
+main {
+	margin: 0 auto;
+	padding: 3rem;
+	div {
+		table {
+			border-collapse: separate;
+			border-spacing: 4px;
+
+			tbody {
+				tr:nth-child(odd) {
+					background-color: c.$trEvenOdd;
+
+					&.selected-row {
+						color: c.$trEvenOdd;
+						background-color: c.$selectedRow;
+					}
+				}
+				tr:nth-child(1),
+				tr:nth-child(1):hover {
+					color: c.$textMain;
+					background-color: c.$trName;
+					text-align: center;
+					cursor: default;
+				}
+				tr {
+					transition: color 0.5s linear, background-color 0.3s ease;
+				}
+				tr:hover {
+					cursor: pointer;
+					color: c.$bgcMain;
+					background-color: c.$textMain;
+				}
+				td {
+					padding: 0.5rem;
+				}
+				.selected-row {
+					color: c.$trEvenOdd;
+					background-color: c.$selectedRow;
+				}
+			}
+		}
+	}
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+	align-items: center;
+
+	&__content {
+		margin: 0 auto;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		max-width: 600px;
+		background-color: c.$bgcMain;
+		border-radius: 7px;
+		max-height: 80vh;
+		overflow-y: auto;
+
+		&__closeButton {
+			align-self: flex-end;
+			font-size: 3rem;
+			font-weight: bold;
+			transition: color 0.3s;
+		}
+		&__closeButton:hover,
+		&__closeButton:focus {
+			color: c.$closeButton;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		&__copyButton {
+			margin: 22px auto;
+			padding: 0.5em;
+			color: c.$textMain;
+			background-color: transparent;
+			border: none;
+			border: 1px solid c.$textMain;
+			border-radius: 7px;
+			transition: color 0.5s linear, background-color 0.3s ease;
+		}
+		&__copyButton:hover {
+			cursor: pointer;
+			color: c.$bgcMain;
+			background-color: c.$textMain;
+		}
+	}
+	&__toast {
+		display: none;
+		position: fixed;
+		bottom: 75px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: rgba(0, 0, 0, 0.7);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		z-index: 1000;
+		animation: fadeInOut 3s ease-in-out;
+	}
+}
