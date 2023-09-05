@@ -1,0 +1,1 @@
+![added a gif showing the project](./.github/project_img/Peek%202023-09-01%2003-50.gif)
