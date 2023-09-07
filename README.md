@@ -37,6 +37,6 @@ In the current version it is rigidly set to accept only xlxs files, but SheetJS 
 The project is built about the modularity that Node.js allows.
 Here's a quick look at what a particular folder is responsible for.
 
-**_.github_** - Responsible for running the site on git from the "dist" folder and hidden graphics for description there.
-**_dist_** - It contains the final versions of the project, mainly compressed.
-**_src_** - Includes draft versions of the files. These are uncompressed files.
+⋅⋅⋅**_.github_** - Responsible for running the site on git from the "dist" folder and hidden graphics for description there.
+⋅⋅⋅**_dist_** - It contains the final versions of the project, mainly compressed.
+⋅⋅⋅**_src_** - Includes draft versions of the files. These are uncompressed files.
