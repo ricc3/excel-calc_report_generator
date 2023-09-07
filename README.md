@@ -4,7 +4,7 @@ Is a simple program on the based of a website basis used to generate reports bas
 
 If you want to send your employer / co-worker some data in the form of a text message, probably, this is the best solution for you for these purposes.
 
-## How To Use
+## HOW TO USE
 
 ![added a gif showing the project](./.github/project_img/Peek%202023-09-01%2003-50.gif)
 
@@ -16,18 +16,27 @@ If you want to send your employer / co-worker some data in the form of a text me
 
 Isn't it trivial ?!
 
-## Technologies
+## TECHNOLOGIES
 
 The project is based on [SheetJS](https://sheetjs.com/) solutions.
 
-In addition, it uses pure HTML, CSS and JavaScript.
+Pure HTML, CSS and JavaScript were used, as well as the following capabilities: node.js, sass / bem.
 
 Every effort has been made to ensure that the code is written according to the latest standards and solutions and meets the standards of RWD.
 
-## Restrictions
+## RESTRICTIONS
 
 In the current version it is rigidly set to accept only xlxs files, but SheetJS allows the use of other formats as well.
 
 **NOT TESTED WITH OTHER FORMATS.**
 
-## **[website](https://ricc3.github.io/excel-calc_report_generator/)**
+## **[WEBSITE](https://ricc3.github.io/excel-calc_report_generator/)**
+
+## OTHERS
+
+The project is built about the modularity that Node.js allows.
+Here's a quick look at what a particular folder is responsible for.
+
+**_.github_** - Responsible for running the site on git from the "dist" folder and hidden graphics for description there.
+**_dist_** - It contains the final versions of the project, mainly compressed.
+**_src_** - Includes draft versions of the files. These are uncompressed files.
